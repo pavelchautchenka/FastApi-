@@ -8,7 +8,7 @@ from sqlalchemy import exc
 from starlette import status
 from app.services.models import User
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/token")
 SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "dqsdqsdqswcx209323m009sfhs90dh")  # Замените на случайный секретный ключ
 ALGORITHM = "HS512"
 USER_IDENTIFIER = "user_id"
